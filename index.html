@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Creadores de Contenido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 IA Creadores de Contenido</h1>
+            <p>Análisis inteligente para optimizar tu contenido</p>
+        </header>
+
+        <main class="chat-container">
+            <div class="chat-window" id="chatWindow">
+                <div class="chat-message bot-message">
+                    <p>¡Hola! Soy tu asistente de IA para creadores de contenido. 👋</p>
+                    <p>Puedo ayudarte a analizar tendencias en:</p>
+                    <ul>
+                        <li>🎮 Minecraft</li>
+                        <li>👗 Ropa y Moda</li>
+                        <li>💄 Maquillaje y Belleza</li>
+                    </ul>
+                    <p>¿Sobre qué tema quieres obtener análisis?</p>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="Escribe tu pregunta sobre contenido..." 
+                    onkeypress="handleKeyPress(event)"
+                >
+                <button onclick="sendMessage()" class="send-btn">Enviar</button>
+            </div>
+
+            <div class="quick-buttons">
+                <button onclick="quickMessage('Cuéntame sobre las tendencias de Minecraft')">📊 Minecraft</button>
+                <button onclick="quickMessage('¿Cuál es el mejor contenido de Ropa ahora?')">👗 Ropa</button>
+                <button onclick="quickMessage('Analiza el contenido de Maquillaje')">💄 Maquillaje</button>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>📚 Historial</h3>
+                <div id="history" class="history-list">
+                    <p class="placeholder">Sin historial aún</p>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>⚙️ Información</h3>
+                <p class="info-text">Esta aplicación utiliza IA avanzada para analizar tendencias de contenido en YouTube y TikTok, proporcionando insights sobre audiencias, horarios óptimos y creadores destacados.</p>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
